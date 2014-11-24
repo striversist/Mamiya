@@ -22,6 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.ec.mamiya.PromotionActivity"
+            android:label="@string/title_activity_promotion" >
+        </activity>
+        <activity
+            android:name="com.ec.mamiya.CategoryActivity"
+            android:label="@string/title_activity_category" >
+        </activity>
+        <activity
+            android:name="com.ec.mamiya.CartActivity"
+            android:label="@string/title_activity_cart" >
+        </activity>
+        <activity
+            android:name="com.ec.mamiya.MineActivity"
+            android:label="@string/title_activity_mine" >
+        </activity>
     </application>
 
 </manifest>
