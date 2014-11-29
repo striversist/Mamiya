@@ -23,17 +23,18 @@
 
         <RadioGroup
             android:id="@+id/tab_group"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_gravity="bottom"
-            android:background="#CCFFFFFF"
-            android:gravity="center_vertical"
+            android:background="#FFF0F0F0"
+            android:gravity="center"
             android:orientation="horizontal" >
             
             <RadioButton
                 android:id="@+id/tab_promotion"
                 style="@style/main_tab_bottom"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/bottom_tab_promotion"
                 android:checked="true"
                 android:text="@string/promotion" />
 
@@ -41,18 +42,21 @@
                 android:id="@+id/tab_category"
                 style="@style/main_tab_bottom"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/bottom_tab_category"
                 android:text="@string/category" />
 
             <RadioButton
                 android:id="@+id/tab_cart"
                 style="@style/main_tab_bottom"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/bottom_tab_cart"
                 android:text="@string/cart" />
 
             <RadioButton
                 android:id="@+id/tab_mine"
                 style="@style/main_tab_bottom"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/bottom_tab_mine"
                 android:text="@string/mine" />
         </RadioGroup>
     </LinearLayout>
