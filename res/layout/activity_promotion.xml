@@ -7,8 +7,8 @@
     <RelativeLayout 
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/header_bg" >
+        android:layout_height="61dp"
+        android:background="@drawable/header_bg" >
         
         <ImageView 
             android:id="@+id/menu_iv"
