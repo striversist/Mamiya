@@ -12,5 +12,6 @@
     <string name="title_activity_category">CategoryActivity</string>
     <string name="title_activity_cart">CartActivity</string>
     <string name="title_activity_mine">MineActivity</string>
+    <string name="logo_text">DOGTREE</string>
 
 </resources>
