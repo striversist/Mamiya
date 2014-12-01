@@ -3,6 +3,7 @@ package com.ec.mamiya;
 import android.app.ActivityGroup;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TabHost;
@@ -15,6 +16,7 @@ public class MainActivity extends ActivityGroup {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         
         mTabHost = (TabHost) findViewById(android.R.id.tabhost);
