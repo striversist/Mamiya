@@ -1,0 +1,65 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <TextView 
+        android:id="@+id/tens_hour"
+        style="@style/count_down_textview"
+        android:text="0" />
+    
+    <View
+        android:layout_width="1.3dp"
+        android:layout_height="match_parent" />
+    
+    <TextView
+        android:id="@+id/hour"
+        style="@style/count_down_textview"
+        android:text="5" />
+    
+    <!-- Colon start -->
+    <TextView
+        style="@style/count_down_textview"
+        android:background="#00FFFFFF"
+        android:textColor="@color/pink_text"
+        android:text="@string/colon" />
+    <!-- Colon end -->
+    
+    <TextView
+        android:id="@+id/tens_minute"
+        style="@style/count_down_textview"
+        android:text="2" />
+    
+    <View
+        android:layout_width="1.3dp"
+        android:layout_height="match_parent" />
+    
+    <TextView
+        android:id="@+id/minute"
+        style="@style/count_down_textview"
+        android:text="5" />
+    
+    <!-- Colon start -->
+    <TextView
+        style="@style/count_down_textview"
+        android:background="#00FFFFFF"
+        android:textColor="@color/pink_text"
+        android:text="@string/colon" />
+    <!-- Colon end -->
+        
+    <TextView
+        android:id="@+id/tens_second"
+        style="@style/count_down_textview"
+        android:text="1" />
+    
+    <View
+        android:layout_width="1.3dp"
+        android:layout_height="match_parent" />
+    
+    <TextView
+        android:id="@+id/second"
+        style="@style/count_down_textview"
+        android:text="5" />    
+    
+</LinearLayout>
