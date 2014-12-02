@@ -2,6 +2,7 @@ package com.ec.mamiya.view;
 
 import android.content.Context;
 import android.os.CountDownTimer;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -9,7 +10,7 @@ import android.widget.TextView;
 import com.ec.mamiya.R;
 
 public class CountingTimerView extends LinearLayout {
-    
+
     private CountDownTimer mCountDownTimer;
     private OnCountDownListener mListener;
     public static abstract interface OnCountDownListener {
@@ -25,9 +26,17 @@ public class CountingTimerView extends LinearLayout {
     private TextView mSecond;
     
     public CountingTimerView(Context context) {
-        super(context);
-        LayoutInflater.from(context).inflate(R.layout.counting_timer_view, this);
+        this(context, null, 0);
+    }
+    
+    public CountingTimerView(Context context, AttributeSet attrs) {
+        super(context, attrs, 0);
+    }
+    
+    public CountingTimerView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
         
+        LayoutInflater.from(context).inflate(R.layout.counting_timer_view, this);
         mContext = context;
         mTensHour = (TextView) findViewById(R.id.tens_hour);
         mHour = (TextView) findViewById(R.id.hour);

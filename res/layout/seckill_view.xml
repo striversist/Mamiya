@@ -1,0 +1,67 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:textSize="15sp"
+	        android:textColor="@color/gray_text"
+	        android:text="@string/today_seckill" />
+	    
+	    <TextView
+	        android:id="@+id/time_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="2dp"
+	        android:layout_marginRight="2dp"
+	        android:gravity="center"
+	        android:textSize="15sp"
+	        android:textColor="@color/pink_text"
+	        android:text="10:00" />
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:textSize="15sp"
+	        android:textColor="@color/gray_text"
+	        android:text="@string/dian_chang" />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+	    
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#FF666666"
+            android:text="@string/time_left_from_the_promotion" />
+        
+        <com.ec.mamiya.view.CountingTimerView
+            android:id="@+id/counting_timer"
+            android:layout_width="74dp"
+            android:layout_height="14dp" >
+            
+        </com.ec.mamiya.view.CountingTimerView>
+        
+    </LinearLayout>
+    
+</RelativeLayout>

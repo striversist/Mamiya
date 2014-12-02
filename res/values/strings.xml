@@ -14,5 +14,8 @@
     <string name="title_activity_mine">MineActivity</string>
     <string name="logo_text">DOGTREE</string>
     <string name="colon">\:</string>
+    <string name="today_seckill">今日秒杀</string>
+    <string name="dian_chang">点场</string>
+    <string name="time_left_from_the_promotion">距离本场结束\:</string>
 
 </resources>
