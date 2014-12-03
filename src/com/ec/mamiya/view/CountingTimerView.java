@@ -30,12 +30,11 @@ public class CountingTimerView extends LinearLayout {
     }
     
     public CountingTimerView(Context context, AttributeSet attrs) {
-        super(context, attrs, 0);
+        this(context, attrs, 0);
     }
     
     public CountingTimerView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        
         LayoutInflater.from(context).inflate(R.layout.counting_timer_view, this);
         mContext = context;
         mTensHour = (TextView) findViewById(R.id.tens_hour);
