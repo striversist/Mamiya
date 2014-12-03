@@ -24,7 +24,7 @@
         <RadioGroup
             android:id="@+id/tab_group"
             android:layout_width="match_parent"
-            android:layout_height="69dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:background="@drawable/tab_bg"
             android:gravity="center"

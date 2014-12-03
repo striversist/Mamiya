@@ -7,7 +7,7 @@
     <RelativeLayout 
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/header_bg" >
         
         <ImageView 
@@ -45,5 +45,19 @@
             android:onClick="onSearchClicked" />
         
     </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:src="@drawable/sample_banner"
+        android:contentDescription="@null" />
+    
+    <com.ec.mamiya.view.SecKillView
+        android:id="@+id/seckill_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner" />
 
 </RelativeLayout>
