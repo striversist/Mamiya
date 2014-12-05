@@ -24,7 +24,7 @@
     <TextView
         style="@style/count_down_textview"
         android:background="#00FFFFFF"
-        android:textColor="@color/pink_text"
+        android:textColor="@color/pink"
         android:text="@string/colon" />
     <!-- Colon end -->
     
@@ -46,7 +46,7 @@
     <TextView
         style="@style/count_down_textview"
         android:background="#00FFFFFF"
-        android:textColor="@color/pink_text"
+        android:textColor="@color/pink"
         android:text="@string/colon" />
     <!-- Colon end -->
         
