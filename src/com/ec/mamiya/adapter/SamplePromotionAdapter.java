@@ -122,26 +122,35 @@ public class SamplePromotionAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-        // XXX: view不用每次inflate，有优化的空间
+        // XXX: 使用setTag/ViewHolder之类的技术优化显示
         switch (ViewType.values()[getItemViewType(position)]) {
             case Banner:
-                view = mInflater.inflate(R.layout.promotion_banner, parent, false);
+                if (view == null) {
+                    view = mInflater.inflate(R.layout.promotion_banner, parent, false);
+                }
                 break;
             case Seckill_Header:
-                view = new SecKillHeader(mContext);
+                if (view == null) {
+                    view = new SecKillHeader(mContext);
+                }
                 break;
             case Seckill_Item:
-                SeckillListItem item = new SeckillListItem(mContext);
-                item.setSeckillObj(mSeckillList.get(position - 2));
-                view = item;
+                if (view == null) {
+                    view = new SeckillListItem(mContext);
+                } 
+                ((SeckillListItem) view).setSeckillObj(mSeckillList.get(position - 2));
                 break;
             case SpecialEntry_Header:
-                view = mInflater.inflate(R.layout.special_entry_header, parent, false);
+                if (view == null) {
+                    view = mInflater.inflate(R.layout.special_entry_header, parent, false);
+                }
                 break;
             case SpecialEntry_Item:
-                SpecialEntryListItem entryItem = new SpecialEntryListItem(mContext);
-                entryItem.setSpecialEntry(mSpecialEntryList.get(position - 3 - mSeckillList.size()));
-                view = entryItem;
+                if (view == null) {
+                    view = new SpecialEntryListItem(mContext);
+                }
+                ((SpecialEntryListItem) view).setSpecialEntry(mSpecialEntryList
+                        .get(position - 3 - mSeckillList.size()));
                 break;
         }
         return view;
