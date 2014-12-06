@@ -46,13 +46,10 @@
         
     </RelativeLayout>
     
-    <ImageView
+    <include
         android:id="@+id/banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/header"
-        android:src="@drawable/sample_banner"
-        android:contentDescription="@null" />
+        android:layout_below="@id/header" 
+        layout="@layout/promotion_banner" />
     
     <com.ec.mamiya.view.SecKillView
         android:id="@+id/seckill_view"
