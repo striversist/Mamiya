@@ -2,22 +2,25 @@ package com.ec.mamiya.adapter;
 
 import java.util.ArrayList;
 
-import com.ec.mamiya.R;
-import com.ec.mamiya.data.SpecialEntry;
-import com.ec.mamiya.data.SeckillObj;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.ec.mamiya.R;
+import com.ec.mamiya.data.SeckillObj;
+import com.ec.mamiya.data.SpecialEntry;
+import com.ec.mamiya.view.SecKillHeader;
+import com.ec.mamiya.view.SeckillListItem;
+import com.ec.mamiya.view.SpecialEntryListItem;
+
 public class SamplePromotionAdapter extends BaseAdapter {
     
     private Context mContext;
     private LayoutInflater mInflater;
     private enum ViewType {
-        Banner, Seckill_CountingDown, Seckill_Item, SpecialEntry_Header, SpecialEntry_Item
+        Banner, Seckill_Header, Seckill_Item, SpecialEntry_Header, SpecialEntry_Item
     }
     private ArrayList<SeckillObj> mSeckillList = new ArrayList<SeckillObj>();
     private ArrayList<SpecialEntry> mSpecialEntryList = new ArrayList<SpecialEntry>();
@@ -30,42 +33,56 @@ public class SamplePromotionAdapter extends BaseAdapter {
          *  Sample Data
          */
         String title, discount, price;
+        SeckillObj seckillObj;
         // Seckill item 1
         title = context.getString(R.string.sample_seckill_item_title_1);
-        discount = context.getString(R.string.sample_seckill_item_price_1);
+        discount = context.getString(R.string.sample_seckill_item_discount_1);
         price = context.getString(R.string.sample_seckill_item_price_1);
-        mSeckillList.add(new SeckillObj("1", title, discount, price, "1"));
+        seckillObj = new SeckillObj("1", title, discount, price, "1");
+        seckillObj.setDrawableId(R.drawable.sample_seckill_pic_01);
+        mSeckillList.add(seckillObj);
         
         // Seckill item 2
         title = context.getString(R.string.sample_seckill_item_title_2);
-        discount = context.getString(R.string.sample_seckill_item_price_2);
+        discount = context.getString(R.string.sample_seckill_item_discount_2);
         price = context.getString(R.string.sample_seckill_item_price_2);
-        mSeckillList.add(new SeckillObj("2", title, discount, price, "2"));
+        seckillObj = new SeckillObj("2", title, discount, price, "2");
+        seckillObj.setDrawableId(R.drawable.sample_seckill_pic_02);
+        mSeckillList.add(seckillObj);
         
         String sTitle, sLeftDay, sDiscount;
+        SpecialEntry entry;
         // Special item 1
         sTitle = context.getString(R.string.sample_special_entry_item_title_1);
         sLeftDay = context.getString(R.string.sample_special_entry_item_countdown_lefttime_1);
         sDiscount = context.getString(R.string.sample_special_entry_item_discount_1);
-        mSpecialEntryList.add(new SpecialEntry("1", sTitle, sLeftDay, sDiscount, "1"));
+        entry = new SpecialEntry("1", sTitle, sLeftDay, sDiscount, "1");
+        entry.setDrawableId(R.drawable.sample_special_entry_item_01);
+        mSpecialEntryList.add(entry);
         
         // Special item 2
         sTitle = context.getString(R.string.sample_special_entry_item_title_2);
         sLeftDay = context.getString(R.string.sample_special_entry_item_countdown_lefttime_2);
         sDiscount = context.getString(R.string.sample_special_entry_item_discount_2);
-        mSpecialEntryList.add(new SpecialEntry("2", sTitle, sLeftDay, sDiscount, "2"));
+        entry = new SpecialEntry("2", sTitle, sLeftDay, sDiscount, "2");
+        entry.setDrawableId(R.drawable.sample_special_entry_item_02);
+        mSpecialEntryList.add(entry);
         
         // Special item 3
         sTitle = context.getString(R.string.sample_special_entry_item_title_3);
         sLeftDay = context.getString(R.string.sample_special_entry_item_countdown_lefttime_3);
         sDiscount = context.getString(R.string.sample_special_entry_item_discount_3);
-        mSpecialEntryList.add(new SpecialEntry("3", sTitle, sLeftDay, sDiscount, "3"));
+        entry = new SpecialEntry("3", sTitle, sLeftDay, sDiscount, "3");
+        entry.setDrawableId(R.drawable.sample_special_entry_item_03);
+        mSpecialEntryList.add(entry);
         
         // Special item 4
         sTitle = context.getString(R.string.sample_special_entry_item_title_4);
         sLeftDay = context.getString(R.string.sample_special_entry_item_countdown_lefttime_4);
         sDiscount = context.getString(R.string.sample_special_entry_item_discount_4);
-        mSpecialEntryList.add(new SpecialEntry("4", sTitle, sLeftDay, sDiscount, "4"));
+        entry = new SpecialEntry("4", sTitle, sLeftDay, sDiscount, "4");
+        entry.setDrawableId(R.drawable.sample_special_entry_item_04);
+        mSpecialEntryList.add(entry);
     }
     
     @Override
@@ -78,7 +95,7 @@ public class SamplePromotionAdapter extends BaseAdapter {
         if (position == 0) {
             return ViewType.Banner.ordinal();
         } else if (position == 1) {
-            return ViewType.Seckill_CountingDown.ordinal();
+            return ViewType.Seckill_Header.ordinal();
         } else if (position < mSeckillList.size() + 2) {
             return ViewType.Seckill_Item.ordinal();
         } else if (position == mSeckillList.size() + 2) {
@@ -110,17 +127,21 @@ public class SamplePromotionAdapter extends BaseAdapter {
             case Banner:
                 view = mInflater.inflate(R.layout.promotion_banner, parent, false);
                 break;
-            case Seckill_CountingDown:
-                view = mInflater.inflate(R.layout.seckill_header, parent, false);
+            case Seckill_Header:
+                view = new SecKillHeader(mContext);
                 break;
             case Seckill_Item:
-                view = mInflater.inflate(R.layout.seckill_list_item, parent, false);
+                SeckillListItem item = new SeckillListItem(mContext);
+                item.setSeckillObj(mSeckillList.get(position - 2));
+                view = item;
                 break;
             case SpecialEntry_Header:
                 view = mInflater.inflate(R.layout.special_entry_header, parent, false);
                 break;
             case SpecialEntry_Item:
-                view = mInflater.inflate(R.layout.special_entry_list_item, parent, false);
+                SpecialEntryListItem entryItem = new SpecialEntryListItem(mContext);
+                entryItem.setSpecialEntry(mSpecialEntryList.get(position - 3 - mSeckillList.size()));
+                view = entryItem;
                 break;
         }
         return view;

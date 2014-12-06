@@ -7,6 +7,8 @@ public class SeckillObj {
     private String mDiscount;
     private String mPrice;
     private String mEntryLink;
+    // For local test:
+    private int mDrawableId;
     
     public SeckillObj(String picLink, String title, String discount, String price, String entryLink) {
         assert (picLink != null);
@@ -40,5 +42,13 @@ public class SeckillObj {
     
     public String getEntryLink() {
         return mEntryLink;
+    }
+    
+    public void setDrawableId(int drawableId) {
+        mDrawableId = drawableId;
+    }
+    
+    public int getDrawableId() {
+        return mDrawableId;
     }
 }

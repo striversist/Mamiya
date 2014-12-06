@@ -8,21 +8,21 @@ import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class SecKillView extends RelativeLayout {
+public class SecKillHeader extends RelativeLayout {
 
     private Context mContext;
     private TextView mTimeTextView;
     private CountingTimerView mCountingTimerView;
     
-    public SecKillView(Context context) {
+    public SecKillHeader(Context context) {
         this(context, null, 0);
     }
     
-    public SecKillView(Context context, AttributeSet attrs) {
+    public SecKillHeader(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
     
-    public SecKillView(Context context, AttributeSet attrs, int defStyle) {
+    public SecKillHeader(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mContext = context;
         LayoutInflater.from(context).inflate(R.layout.seckill_header, this);

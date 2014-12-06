@@ -7,6 +7,8 @@ public class SpecialEntry {
     private String mLeftDay;
     private String mDiscount;
     private String mEntryLink;
+    // For local test
+    private int mDrawableId;
     
     public SpecialEntry(String picLink, String title, String leftDay, String discount, String entryLink) {
         assert (picLink != null);
@@ -40,5 +42,13 @@ public class SpecialEntry {
     
     public String getEntryLink() {
         return mEntryLink;
+    }
+    
+    public void setDrawableId(int drawableId) {
+        mDrawableId = drawableId;
+    }
+    
+    public int getDrawableId() {
+        return mDrawableId;
     }
 }
