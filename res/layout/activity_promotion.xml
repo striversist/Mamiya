@@ -48,13 +48,16 @@
     
     <include
         android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/header" 
         layout="@layout/promotion_banner" />
     
-    <com.ec.mamiya.view.SecKillView
+    <include
         android:id="@+id/seckill_view"
+        android:layout_below="@id/banner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/banner" />
+        android:layout_height="40dp"
+        layout="@layout/seckill_view" />
 
 </RelativeLayout>
