@@ -21,7 +21,7 @@
     <string name="chinese_currency_symbol">¥</string>
     <string name="brand_link_hint">查看品牌专场宝贝 ></string>
     <string name="seckill">立即秒杀</string>
-    <string name="promotion_item_header_hint">今日特卖-超低价特卖进行中\.\.\.</string>
+    <string name="promotion_item_header_hint">今日特卖-超低价特卖进行中&#8230;</string>
     <string name="zhe_qi">折起</string>
     
     <string name="sample_seckill_header_time">10:00</string>
