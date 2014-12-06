@@ -25,7 +25,7 @@ public class SecKillView extends RelativeLayout {
     public SecKillView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mContext = context;
-        LayoutInflater.from(context).inflate(R.layout.seckill_view, this);
+        LayoutInflater.from(context).inflate(R.layout.seckill_header, this);
         mTimeTextView = (TextView) findViewById(R.id.time_tv);
         mCountingTimerView = (CountingTimerView) findViewById(R.id.counting_timer);
     }

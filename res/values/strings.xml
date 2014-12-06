@@ -16,6 +16,7 @@
     <string name="colon">\:</string>
     <string name="today_seckill">今日秒杀</string>
     <string name="dian_chang">点场</string>
+    <string name="zhe">折</string>
     <string name="time_left_from_the_promotion">距离本场结束\:</string>
     <string name="chinese_currency_symbol">¥</string>
     <string name="brand_link_hint">查看品牌专场宝贝 ></string>
@@ -23,11 +24,24 @@
     <string name="promotion_item_header_hint">今日特卖-超低价特卖进行中\.\.\.</string>
     <string name="zhe_qi">折起</string>
     
+    <string name="sample_seckill_header_time">10:00</string>
     <string name="sample_seckill_item_title_1">Similac雅培亲体金装喜康力幼儿奶粉</string>
-    <string name="sample_seckill_item_discount_1">1.5折</string>
+    <string name="sample_seckill_item_title_2">妈咪宝贝均吸干爽纸尿裤XL32片 加大号尿不湿</string>
+    <string name="sample_seckill_item_discount_1">1.5</string>
+    <string name="sample_seckill_item_discount_2">2</string>
     <string name="sample_seckill_item_price_1">118.00</string>
-    <string name="sample_promotion_item_countdown_lefttime_1">剩4天</string>
-    <string name="sample_promotion_item_title_1">迪士尼品牌儿童服饰专场</string>
-    <string name="sample_promotion_item_discount_value">0.4</string>
+    <string name="sample_seckill_item_price_2">78.00</string>
+    <string name="sample_special_entry_item_countdown_lefttime_1">剩4天</string>
+    <string name="sample_special_entry_item_countdown_lefttime_2">剩4天</string>
+    <string name="sample_special_entry_item_countdown_lefttime_3">剩4天</string>
+    <string name="sample_special_entry_item_countdown_lefttime_4">剩4天</string>
+    <string name="sample_special_entry_item_title_1">迪士尼品牌儿童服饰专场</string>
+    <string name="sample_special_entry_item_title_2">惠氏儿童奶粉专场</string>
+    <string name="sample_special_entry_item_title_3">乐高儿童玩具专场</string>
+    <string name="sample_special_entry_item_title_4">迪士尼秋冬潮流新品专场</string>
+    <string name="sample_special_entry_item_discount_1">0.4</string>
+    <string name="sample_special_entry_item_discount_2">0.2</string>
+    <string name="sample_special_entry_item_discount_3">3.5</string>
+    <string name="sample_special_entry_item_discount_4">5</string>
 
 </resources>

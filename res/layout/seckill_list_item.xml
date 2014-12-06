@@ -32,17 +32,32 @@
             android:textStyle="bold"
             android:text="@string/sample_seckill_item_title_1" />
         
-        <TextView 
-            android:id="@+id/discount"
+        <LinearLayout
+            android:id="@+id/discount_ll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:gravity="left|center"
-            android:background="@drawable/discount_bg"
             android:paddingLeft="2dp"
-            android:textSize="12sp"
-            android:textColor="@color/white"
-            android:text="@string/sample_seckill_item_discount_1" />
+            android:background="@drawable/discount_bg"
+            android:orientation="horizontal"
+            android:gravity="left|center" >
+            
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sample_seckill_item_discount_1"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:text="@string/zhe" />
+        </LinearLayout>
         
         <RelativeLayout
             android:layout_width="match_parent"
