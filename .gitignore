@@ -1,2 +1,4 @@
 /bin
 /gen
+/third_party/PullToRefresh/bin
+/third_party/PullToRefresh/gen

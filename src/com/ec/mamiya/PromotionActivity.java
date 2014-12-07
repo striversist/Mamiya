@@ -1,22 +1,69 @@
 package com.ec.mamiya;
 
-import com.ec.mamiya.adapter.SamplePromotionAdapter;
-
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.ListView;
 
+import com.ec.mamiya.adapter.SamplePromotionAdapter;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
+
 public class PromotionActivity extends Activity {
 
-    private ListView mListView;
+    private PullToRefreshListView mPullRefreshListView;
+    private SamplePromotionAdapter mAdapter;
+    
+    private class GetDataTask extends AsyncTask<Void, Void, String[]> {
+
+        @Override
+        protected String[] doInBackground(Void... params) {
+            // Simulates a background job.
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String[] result) {
+            // TODO: Refresh UI component
+
+            // Call onRefreshComplete when the list has been refreshed.
+            mPullRefreshListView.onRefreshComplete();
+            super.onPostExecute(result);
+        }
+    }
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_promotion);
         
-        mListView = (ListView) findViewById(R.id.listview);
+        mPullRefreshListView = (PullToRefreshListView) findViewById(R.id.listview);
+        // Set a listener to be invoked when the list should be refreshed.
+        mPullRefreshListView.setOnRefreshListener(new OnRefreshListener<ListView>() {
+            @Override
+            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
+                String label = DateUtils.formatDateTime(getApplicationContext(), System.currentTimeMillis(),
+                        DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
+
+                // Update the LastUpdatedLabel
+                refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
+
+                // Do work to refresh the list here.
+                new GetDataTask().execute();
+            }
+        });
+        
+        ListView actualListView = mPullRefreshListView.getRefreshableView();
+        // Need to use the Actual ListView when registering for Context Menu
+        registerForContextMenu(actualListView);
+        
         loadSampleData();
     }
     
@@ -29,6 +76,8 @@ public class PromotionActivity extends Activity {
     }
     
     private void loadSampleData() {
-        mListView.setAdapter(new SamplePromotionAdapter(this));
+        ListView actualListView = mPullRefreshListView.getRefreshableView();
+        mAdapter = new SamplePromotionAdapter(this);
+        actualListView.setAdapter(mAdapter);
     }
 }

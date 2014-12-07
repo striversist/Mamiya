@@ -62,7 +62,7 @@
         layout="@layout/seckill_view" />
     -->
     
-    <ListView
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
