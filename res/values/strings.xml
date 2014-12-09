@@ -12,6 +12,7 @@
     <string name="title_activity_category">CategoryActivity</string>
     <string name="title_activity_cart">CartActivity</string>
     <string name="title_activity_mine">MineActivity</string>
+    <string name="title_activity_product">ProductActivity</string>
     <string name="logo_text">DOGTREE</string>
     <string name="colon">\:</string>
     <string name="today_seckill">今日秒杀</string>
@@ -23,7 +24,6 @@
     <string name="seckill">立即秒杀</string>
     <string name="promotion_item_header_hint">今日特卖-超低价特卖进行中&#8230;</string>
     <string name="zhe_qi">折起</string>
-    
     <string name="sample_seckill_header_time">10:00</string>
     <string name="sample_seckill_item_title_1">Similac雅培亲体金装喜康力幼儿奶粉</string>
     <string name="sample_seckill_item_title_2">妈咪宝贝均吸干爽纸尿裤XL32片 加大号尿不湿</string>
@@ -43,5 +43,7 @@
     <string name="sample_special_entry_item_discount_2">0.2</string>
     <string name="sample_special_entry_item_discount_3">3.5</string>
     <string name="sample_special_entry_item_discount_4">5</string>
+    <string name="sample_product_title_1">ora2皓乐齿盛势达Do clear2岁 3岁 6岁-8岁儿童牙膏 日本进口</string>
+    <string name="sample_product_price_1">69.90</string>
 
 </resources>
