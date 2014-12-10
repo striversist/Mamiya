@@ -56,6 +56,62 @@
             android:textColor="@color/pink"
             android:text="@string/sample_product_price_1" />
         
+        <LinearLayout
+            android:id="@+id/discount_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:background="@drawable/discount_bg"
+            android:orientation="horizontal" >
+            
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sample_seckill_item_discount_1"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:text="@string/zhe" />
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/left_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="12sp"
+            android:textColor="#FFA8A8A8"
+            android:text="@string/sample_product_left_count_1" />
+        
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" >
+            
+            <TextView
+                android:id="@+id/left_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/ic_product_left_time"
+                android:drawablePadding="10dp"
+                android:text="@string/sample_product_left_time_1"
+                android:textColor="@color/pink"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
     </LinearLayout>
     
 </RelativeLayout>
