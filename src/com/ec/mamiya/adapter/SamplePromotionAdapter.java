@@ -19,7 +19,7 @@ public class SamplePromotionAdapter extends BaseAdapter {
     
     private Context mContext;
     private LayoutInflater mInflater;
-    private enum ViewType {
+    public enum ViewType {
         Banner, Seckill_Header, Seckill_Item, SpecialEntry_Header, SpecialEntry_Item
     }
     private ArrayList<SeckillObj> mSeckillList = new ArrayList<SeckillObj>();

@@ -5,9 +5,12 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.ec.mamiya.adapter.SamplePromotionAdapter;
+import com.ec.mamiya.adapter.SamplePromotionAdapter.ViewType;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -59,6 +62,20 @@ public class PromotionActivity extends Activity {
                 new GetDataTask().execute();
             }
         });
+        mPullRefreshListView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				int headerCount = mPullRefreshListView.getRefreshableView().getHeaderViewsCount();
+				position -= headerCount;
+				switch (ViewType.values()[mAdapter.getItemViewType(position)]) {
+					case Seckill_Item:
+						ProductActivity.startFrom(PromotionActivity.this);
+						break;
+					default:
+						break;
+				}
+			}
+		});
         
         ListView actualListView = mPullRefreshListView.getRefreshableView();
         // Need to use the Actual ListView when registering for Context Menu
