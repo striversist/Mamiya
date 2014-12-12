@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/tabs_header"
         android:layout_width="match_parent"
-        android:layout_height="47dp"
+        android:layout_height="45dp"
         android:orientation="horizontal" >
         
         <TextView
@@ -46,6 +46,11 @@
             android:textColor="#FF5A5A5A"
             android:text="@string/product_tab_reviews" />
     </LinearLayout>
+    
+    <com.viewpagerindicator.UnderlinePageIndicator
+        android:id="@+id/indicator"
+        android:layout_height="2dp"
+        android:layout_width="match_parent" />
     
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"

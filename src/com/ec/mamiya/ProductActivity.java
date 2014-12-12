@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
 import com.ec.mamiya.adapter.ProductFragmentPagerAdapter;
+import com.viewpagerindicator.UnderlinePageIndicator;
 
 public class ProductActivity extends FragmentActivity {
 	
@@ -21,6 +22,11 @@ public class ProductActivity extends FragmentActivity {
         mPager = (ViewPager) findViewById(R.id.pager);
         mAdapter = new ProductFragmentPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mAdapter);
+        
+        UnderlinePageIndicator indicator = (UnderlinePageIndicator)findViewById(R.id.indicator);
+        indicator.setViewPager(mPager);
+        indicator.setFades(false);
+        indicator.setSelectedColor(getResources().getColor(R.color.pink));
     }
     
     public static void startFrom(Context context) {
