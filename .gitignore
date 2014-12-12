@@ -2,3 +2,5 @@
 /gen
 /third_party/PullToRefresh/bin
 /third_party/PullToRefresh/gen
+/third_party/ViewPagerIndicator/bin
+/third_party/ViewPagerIndicator/gen
