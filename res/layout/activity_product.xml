@@ -2,19 +2,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductActivity" >
+    tools:context=".ProductActivity"
+    android:background="@color/header_bg" >
     
-    <include
-        android:id="@+id/basic_view"
-        layout="@layout/product_basic_view"
+    <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    
-    <include
-        android:id="@+id/tabs_view"
-        layout="@layout/product_tabs_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/basic_view" />
+        android:layout_height="wrap_content" >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	        
+		    <com.ec.mamiya.view.ProductBasicView
+		        android:id="@+id/basic_view"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+		    
+		    <RelativeLayout
+		        android:id="@+id/select_detail_rl"
+		        android:layout_width="match_parent"
+		        android:layout_height="47dp"
+		        android:layout_marginTop="10dp"
+		        android:background="@color/white" >
+		        
+			    <TextView
+			        android:id="@+id/select_detail"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="10dp"
+			        android:layout_centerVertical="true"
+			        android:textSize="14sp"
+			        android:textColor="#FF5A5A5A"
+			        android:text="@string/product_select_detail" />
+			    
+			    <ImageView
+			        android:id="@+id/arrow"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_centerVertical="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_marginRight="17dp"
+			        android:src="@drawable/product_select_arrow"
+			        android:contentDescription="@null" />
+		    </RelativeLayout>
+		    
+		    <include
+		        android:id="@+id/tabs_view"
+		        layout="@layout/product_tabs_view"
+		        android:layout_width="match_parent"
+		        android:layout_height="600dp"
+		        android:minHeight="600dp"
+		        android:layout_marginTop="10dp" />
+	    </LinearLayout>
+    </ScrollView>
     
 </RelativeLayout>
