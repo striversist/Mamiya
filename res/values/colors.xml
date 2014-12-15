@@ -6,4 +6,5 @@
     <color name="pink">#FFF56293</color>
     <color name="gray_text">#FF535353</color>
     <color name="gray_btn">#FF999999</color>
+    <color name="sub_title_color">#FF5A5A5A</color>
 </resources>
