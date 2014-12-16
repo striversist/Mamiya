@@ -1,0 +1,149 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+    <LinearLayout
+        android:id="@+id/shop_info_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_light_gray"
+            android:text="@string/shop_info" />
+        
+        <TextView
+            android:id="@+id/shop_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_dark_gray"
+            android:text="@string/sample_product_params_shop_info_1" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/dotted_line" />
+    
+    <LinearLayout
+        android:id="@+id/shop_brand_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_light_gray"
+            android:text="@string/brand" />
+        
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_dark_gray"
+            android:text="@string/sample_product_params_brand_1" />
+    </LinearLayout>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/dotted_line" />
+    
+    <LinearLayout
+        android:id="@+id/shop_product_number_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_light_gray"
+            android:text="@string/product_number" />
+        
+        <TextView
+            android:id="@+id/product_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_dark_gray"
+            android:text="@string/sample_product_params_product_number_1" />
+    </LinearLayout>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/dotted_line" />
+    
+    <LinearLayout
+        android:id="@+id/shop_product_for_ages_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_light_gray"
+            android:text="@string/for_ages" />
+        
+        <TextView
+            android:id="@+id/for_ages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_dark_gray"
+            android:text="@string/sample_product_params_for_ages_1" />
+    </LinearLayout>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/dotted_line" />
+    
+    <LinearLayout
+        android:id="@+id/shop_product_places_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_light_gray"
+            android:text="@string/product_place" />
+        
+        <TextView
+            android:id="@+id/product_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/sub_title_dark_gray"
+            android:text="@string/sample_product_params_product_place_1" />
+    </LinearLayout>
+    
+</LinearLayout>

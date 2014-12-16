@@ -30,6 +30,11 @@
     <string name="product_tab_reviews">商品评价</string>
     <string name="product_select_detail">选择  颜色分类  适用尺码</string>
     <string name="product_satisfaction">商品满意度</string>
+    <string name="shop_info">商家信息：</string>
+    <string name="brand">品牌：</string>
+    <string name="product_number">货号：</string>
+    <string name="for_ages">适用年龄：</string>
+    <string name="product_place">产地：</string>
     
     <string name="sample_seckill_header_time">10:00</string>
     <string name="sample_seckill_item_title_1">Similac雅培亲体金装喜康力幼儿奶粉</string>
@@ -55,5 +60,10 @@
     <string name="sample_product_left_count_1">仅剩35件</string>
     <string name="sample_product_left_time_1">剩3天03:14:39</string>
     <string name="sample_product_reviews_satisfaction_score_1">4.9</string>
+    <string name="sample_product_params_shop_info_1">***正品代理店</string>
+    <string name="sample_product_params_brand_1">DO</string>
+    <string name="sample_product_params_product_number_1">W956242345</string>
+    <string name="sample_product_params_for_ages_1">2岁  3岁  6岁-8岁  儿童</string>
+    <string name="sample_product_params_product_place_1">日本</string>
 
 </resources>

@@ -16,7 +16,7 @@
             android:layout_marginLeft="10dp"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="@color/sub_title_color"
+            android:textColor="@color/sub_title_dark_gray"
             android:text="@string/product_satisfaction" />
         
         <TextView
