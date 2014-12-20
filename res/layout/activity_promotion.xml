@@ -4,47 +4,11 @@
     android:layout_height="match_parent"
     tools:context=".PromotionActivity" >
 
-    <RelativeLayout 
+    <include
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/header_bg" >
-        
-        <ImageView 
-            android:id="@+id/menu_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/header_menu"
-            android:contentDescription="@null"
-            android:clickable="true"
-            android:onClick="onMenuClicked" />
-        
-        <TextView
-            android:id="@+id/logo_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textSize="24sp"
-            android:textColor="@color/pink"
-            android:textStyle="bold"
-            android:text="@string/logo_text" />
-        
-        <ImageView 
-            android:id="@+id/search_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/header_search"
-            android:contentDescription="@null"
-            android:clickable="true"
-            android:onClick="onSearchClicked" />
-        
-    </RelativeLayout>
+        layout="@layout/header" />
     
     <!-- 
     <include
