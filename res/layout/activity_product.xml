@@ -57,4 +57,33 @@
 	    </LinearLayout>
     </ScrollView>
     
+    <LinearLayout
+        android:id="@+id/cart_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/header_bg"
+        android:orientation="vertical" >
+	    
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/header_bg" />
+        
+        <TextView
+            android:id="@+id/add_cart"
+            android:layout_width="117dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/pink"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/add_to_cart" />
+        
+    </LinearLayout>
+    
 </RelativeLayout>

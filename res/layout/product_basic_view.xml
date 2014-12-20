@@ -8,6 +8,7 @@
         android:id="@+id/picture"
         android:layout_width="match_parent"
         android:layout_height="317dp"
+        android:src="@drawable/sample_product_picture_1"
         android:contentDescription="@null" />
     
     <View
