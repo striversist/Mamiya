@@ -2,23 +2,22 @@ package com.ec.mamiya;
 
 import java.util.ArrayList;
 
-import com.ec.mamiya.adapter.CategoryGridAdapter;
-import com.ec.mamiya.data.CategoryBrand;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.GridView;
+
+import com.ec.mamiya.data.CategoryBrand;
+import com.ec.mamiya.view.CategoryBrandsView;
 
 public class CategoryActivity extends Activity {
-
-    private GridView mGridView;
+    
+    private CategoryBrandsView mBrandsView;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
         
-        mGridView = (GridView) findViewById(R.id.grid);
+        mBrandsView = (CategoryBrandsView) findViewById(R.id.category_brands);
         
         loadSampleData();
     }
@@ -48,6 +47,6 @@ public class CategoryActivity extends Activity {
             brand.drawableId = logo;
             brands.add(brand);
         }
-        mGridView.setAdapter(new CategoryGridAdapter(this, brands));
+        mBrandsView.setBrands(brands);
     }
 }

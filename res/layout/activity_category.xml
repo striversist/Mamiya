@@ -2,101 +2,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CategoryActivity"
-    android:background="@color/header_bg" >
+    android:background="@color/header_bg"
+    tools:context=".CategoryActivity" >
 
     <include
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/header" />
-    
-    <LinearLayout
-        android:id="@+id/category"
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/header"
-        android:orientation="vertical"
-        android:background="@color/white" >
-        
+        android:layout_below="@id/header" >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-            <TextView
-                android:id="@+id/milk"
-                style="@style/category_textview"
-                android:drawableTop="@drawable/ic_milk"
-                android:text="@string/category_milk" />
-            
-            <TextView
-                android:id="@+id/health"
-                style="@style/category_textview"
-                android:drawableTop="@drawable/ic_health"
-                android:text="@string/category_health" />
-            
-            <TextView
-                android:id="@+id/pregnant"
-                style="@style/category_textview"
-                android:drawableTop="@drawable/ic_pregnant"
-                android:text="@string/category_milk" />
-            
-            <TextView
-                android:id="@+id/scar"
-                style="@style/category_textview"
-                android:drawableTop="@drawable/ic_scar"
-                android:text="@string/category_scar" />
+            android:orientation="vertical" >
+
+            <!-- Category begin << -->
+            <LinearLayout
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/milk"
+                        style="@style/category_textview"
+                        android:drawableTop="@drawable/ic_milk"
+                        android:text="@string/category_milk" />
+
+                    <TextView
+                        android:id="@+id/health"
+                        style="@style/category_textview"
+                        android:drawableTop="@drawable/ic_health"
+                        android:text="@string/category_health" />
+
+                    <TextView
+                        android:id="@+id/pregnant"
+                        style="@style/category_textview"
+                        android:drawableTop="@drawable/ic_pregnant"
+                        android:text="@string/category_milk" />
+
+                    <TextView
+                        android:id="@+id/scar"
+                        style="@style/category_textview"
+                        android:drawableTop="@drawable/ic_scar"
+                        android:text="@string/category_scar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/milk_bottle"
+                        style="@style/category_textview"
+                        android:drawableTop="@drawable/ic_milk_bottle"
+                        android:text="@string/category_milk_bottle" />
+
+                    <TextView
+                        android:id="@+id/baby_health"
+                        style="@style/category_textview"
+                        android:drawableTop="@drawable/ic_baby_health"
+                        android:text="@string/category_baby_health" />
+
+                    <TextView
+                        android:id="@+id/toy"
+                        style="@style/category_textview"
+                        android:drawableTop="@drawable/ic_toy"
+                        android:text="@string/category_toy" />
+
+                    <TextView
+                        android:id="@+id/holder"
+                        style="@style/category_textview"
+                        android:drawableTop="@drawable/ic_milk_bottle"
+                        android:text="@string/category_holder"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Category end >> -->
+
+            <com.ec.mamiya.view.CategoryBrandsView
+                android:id="@+id/category_brands"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
         </LinearLayout>
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:orientation="horizontal" >
-            <TextView
-                android:id="@+id/milk_bottle"
-                style="@style/category_textview"
-                android:drawableTop="@drawable/ic_milk_bottle"
-                android:text="@string/category_milk_bottle" />
-            
-            <TextView
-                android:id="@+id/baby_health"
-                style="@style/category_textview"
-                android:drawableTop="@drawable/ic_baby_health"
-                android:text="@string/category_baby_health" />
-            
-            <TextView
-                android:id="@+id/toy"
-                style="@style/category_textview"
-                android:drawableTop="@drawable/ic_toy"
-                android:text="@string/category_toy" />
-            
-            <TextView
-                android:id="@+id/holder"
-                style="@style/category_textview"
-                android:drawableTop="@drawable/ic_milk_bottle"
-                android:text="@string/category_holder"
-                android:visibility="invisible" />
-        </LinearLayout>
-    </LinearLayout>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/category"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:background="@color/white" >
-	    <GridView
-	        android:id="@+id/grid"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:numColumns="3"
-	        android:columnWidth="110dp"
-	        android:verticalSpacing="10dp"
-	        android:horizontalSpacing="10dp"
-	        android:stretchMode="columnWidth"
-	        android:background="@color/white" />
-    </LinearLayout>
-    
+    </ScrollView>
+
 </RelativeLayout>
