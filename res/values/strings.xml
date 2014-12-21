@@ -45,6 +45,12 @@
     <string name="category_toy">婴幼玩具</string>
     <string name="category_holder">占位</string>
     <string name="category_more_brands">查看更多品牌>></string>
+    <string name="mine_welcome">在DOGTREE购物，快乐就好！</string>
+    <string name="not_paid">待付款</string>
+    <string name="not_send">待发货</string>
+    <string name="send">待收货</string>
+    <string name="not_comment">待评价</string>
+    <string name="post_sale">我的售后</string>
     
     <string name="sample_seckill_header_time">10:00</string>
     <string name="sample_seckill_item_title_1">Similac雅培亲体金装喜康力幼儿奶粉</string>
@@ -75,5 +81,6 @@
     <string name="sample_product_params_product_number_1">W956242345</string>
     <string name="sample_product_params_for_ages_1">2岁  3岁  6岁-8岁  儿童</string>
     <string name="sample_product_params_product_place_1">日本</string>
+    <string name="sample_mine_nickname_1">灰姑娘 12123</string>
 
 </resources>
