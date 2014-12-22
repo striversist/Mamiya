@@ -43,7 +43,7 @@
 			        android:layout_centerVertical="true"
 			        android:layout_alignParentRight="true"
 			        android:layout_marginRight="17dp"
-			        android:src="@drawable/product_select_arrow"
+			        android:src="@drawable/ic_right_arrow"
 			        android:contentDescription="@null" />
 		    </RelativeLayout>
 		    

@@ -51,6 +51,10 @@
     <string name="send">待收货</string>
     <string name="not_comment">待评价</string>
     <string name="post_sale">我的售后</string>
+    <string name="orders">全部订单</string>
+    <string name="addresses">地址管理</string>
+    <string name="feedback">意见反馈</string>
+    <string name="about_us">关于我们</string>
     
     <string name="sample_seckill_header_time">10:00</string>
     <string name="sample_seckill_item_title_1">Similac雅培亲体金装喜康力幼儿奶粉</string>

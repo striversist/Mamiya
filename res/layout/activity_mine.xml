@@ -3,121 +3,218 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MineActivity"
-    android:background="@color/header_bg" >
+    android:background="@color/header_bg"
+    tools:context=".MineActivity" >
 
     <RelativeLayout
         android:id="@+id/profile_rl"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/pink" >
-        
+
         <com.ec.mamiya.view.CircleImageView
             android:id="@+id/image"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="60dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/sample_mine_image_1"
+            android:layout_marginTop="60dp"
             android:contentDescription="@null"
-            app:border_width="2dp"
-            app:border_color="@color/white" />
-        
+            android:src="@drawable/sample_mine_image_1"
+            app:border_color="@color/white"
+            app:border_width="2dp" />
+
         <TextView
             android:id="@+id/nickname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/image"
-            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
-            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:text="@string/sample_mine_nickname_1"
             android:textColor="@color/white"
-            android:text="@string/sample_mine_nickname_1" />
-        
+            android:textSize="14sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/nickname"
-            android:layout_marginTop="12dp"
             android:layout_centerHorizontal="true"
-            android:textSize="10sp"
+            android:layout_marginTop="12dp"
+            android:text="@string/mine_welcome"
             android:textColor="@color/white"
-            android:text="@string/mine_welcome" />
+            android:textSize="10sp" />
     </RelativeLayout>
-    
+
     <LinearLayout
         android:id="@+id/trade_opers_ll"
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:layout_below="@id/profile_rl"
+        android:background="@color/white"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:background="@color/white" >
+        android:orientation="horizontal" >
 
         <!-- 待付款 -->
+
         <TextView
             android:id="@+id/not_paid"
             style="@style/mine_trade_opers_item"
             android:drawableTop="@drawable/ic_not_paid"
             android:text="@string/not_paid" />
+
         <View
             android:layout_width="1dp"
             android:layout_height="37dp"
             android:layout_gravity="center_vertical"
             android:background="@color/divider_bg" />
-        
+
         <!-- 待发货 -->
+
         <TextView
             android:id="@+id/not_send"
             style="@style/mine_trade_opers_item"
             android:drawableTop="@drawable/ic_not_send"
             android:text="@string/not_send" />
+
         <View
             android:layout_width="1dp"
             android:layout_height="37dp"
             android:layout_gravity="center_vertical"
             android:background="@color/divider_bg" />
-        
+
         <!-- 待收货 -->
+
         <TextView
             android:id="@+id/send"
             style="@style/mine_trade_opers_item"
             android:drawableTop="@drawable/ic_send"
             android:text="@string/send" />
+
         <View
             android:layout_width="1dp"
             android:layout_height="37dp"
             android:layout_gravity="center_vertical"
             android:background="@color/divider_bg" />
-        
+
         <!-- 待评价 -->
+
         <TextView
             android:id="@+id/not_comment"
             style="@style/mine_trade_opers_item"
             android:drawableTop="@drawable/ic_not_comment"
             android:text="@string/not_comment" />
+
         <View
             android:layout_width="1dp"
             android:layout_height="37dp"
             android:layout_gravity="center_vertical"
             android:background="@color/divider_bg" />
-        
+
         <!-- 我的售后 -->
+
         <TextView
             android:id="@+id/post_sale"
             style="@style/mine_trade_opers_item"
             android:drawableTop="@drawable/ic_post_sale"
             android:text="@string/post_sale" />
+
         <View
             android:layout_width="1dp"
             android:layout_height="37dp"
             android:layout_gravity="center_vertical"
             android:background="@color/divider_bg" />
     </LinearLayout>
+
     <View
+        style="@style/mine_sep"
+        android:layout_below="@id/trade_opers_ll" />
+
+    <RelativeLayout
+        android:id="@+id/orders"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="47dp"
         android:layout_below="@id/trade_opers_ll"
-        android:background="@color/divider_bg" />
+        android:layout_marginTop="10dp"
+        android:background="@color/white" >
+
+        <View
+            style="@style/mine_sep"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            style="@style/mine_sub_item_text_view"
+            android:drawableLeft="@drawable/ic_orders"
+            android:text="@string/orders" />
+
+        <ImageView
+            style="@style/mine_right_arrow"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/addresses"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@id/orders"
+        android:background="@color/white" >
+
+        <View
+            style="@style/mine_sep"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            style="@style/mine_sub_item_text_view"
+            android:drawableLeft="@drawable/ic_addresses"
+            android:text="@string/addresses" />
+
+        <ImageView
+            style="@style/mine_right_arrow"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@id/addresses"
+        android:background="@color/white" >
+
+        <View
+            style="@style/mine_sep"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            style="@style/mine_sub_item_text_view"
+            android:drawableLeft="@drawable/ic_orders"
+            android:text="@string/feedback" />
+
+        <ImageView
+            style="@style/mine_right_arrow"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/about_us"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@id/feedback"
+        android:background="@color/white" >
+
+        <View
+            style="@style/mine_sep"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            style="@style/mine_sub_item_text_view"
+            android:drawableLeft="@drawable/ic_about_us"
+            android:text="@string/about_us" />
+
+        <ImageView
+            style="@style/mine_right_arrow"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+    <View
+        style="@style/mine_sep"
+        android:layout_below="@id/about_us" />
 
 </RelativeLayout>
