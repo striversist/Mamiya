@@ -80,12 +80,15 @@
     <string name="sample_product_left_count_1">仅剩35件</string>
     <string name="sample_product_left_time_1">剩3天03:14:39</string>
     <string name="sample_product_reviews_satisfaction_score_1">4.9</string>
+    <string name="sample_product_reviews_account_name_1">165***525@qq.com</string>
+    <string name="sample_product_reviews_text_1">味道好闻，宝宝喜欢，比商场便宜，物流很快，比其它订单要快好多！</string>
+    <string name="sample_product_reviews_params_1">颜色：粉色    尺码：L</string>
     <string name="sample_product_params_shop_info_1">***正品代理店</string>
     <string name="sample_product_params_brand_1">DO</string>
     <string name="sample_product_params_product_number_1">W956242345</string>
     <string name="sample_product_params_for_ages_1">2岁  3岁  6岁-8岁  儿童</string>
     <string name="sample_product_params_product_place_1">日本</string>
-    <string name="sample_mine_nickname_1">灰姑娘 12123</string>
     <string name="sample_product_details_text">2014最后一次疯狂！您准备好了吗？\n为了美丽的您，为了可爱的宝宝赶紧囤货起来！</string>
+    <string name="sample_mine_nickname_1">灰姑娘 12123</string>
 
 </resources>
