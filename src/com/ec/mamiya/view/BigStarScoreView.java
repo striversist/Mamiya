@@ -7,21 +7,21 @@ import android.widget.LinearLayout;
 
 import com.ec.mamiya.R;
 
-public class SmallStarScroreView extends LinearLayout {
+public class BigStarScoreView extends LinearLayout {
     
     private Context mContext;
     
-    public SmallStarScroreView(Context context) {
+    public BigStarScoreView(Context context) {
         this(context, null, 0);
     }
     
-    public SmallStarScroreView(Context context, AttributeSet attrs) {
+    public BigStarScoreView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
     
-    public SmallStarScroreView(Context context, AttributeSet attrs, int defStyle) {
+    public BigStarScoreView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mContext = context;
-        LayoutInflater.from(context).inflate(R.layout.small_star_score, this);
+        LayoutInflater.from(context).inflate(R.layout.big_star_score, this);
     }
 }

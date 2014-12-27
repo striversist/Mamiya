@@ -23,7 +23,7 @@
         android:textColor="@color/pink"
         android:text="@string/sample_product_reviews_satisfaction_score_1" />
     
-    <com.ec.mamiya.view.BigStarScroreView
+    <com.ec.mamiya.view.BigStarScoreView
         android:id="@+id/big_score_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
