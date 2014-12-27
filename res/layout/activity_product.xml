@@ -51,8 +51,8 @@
 		        android:id="@+id/tabs_view"
 		        layout="@layout/product_tabs_view"
 		        android:layout_width="match_parent"
-		        android:layout_height="600dp"
-		        android:minHeight="600dp"
+		        android:layout_height="400dp"
+		        android:minHeight="400dp"
 		        android:layout_marginTop="10dp" />
 	    </LinearLayout>
     </ScrollView>
