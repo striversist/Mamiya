@@ -10,16 +10,17 @@ import android.widget.BaseAdapter;
 
 import com.ec.mamiya.R;
 import com.ec.mamiya.data.ProductReview;
+import com.ec.mamiya.view.BigStarScoreView;
 
 public class ProductReviewsListAdapter extends BaseAdapter {
 
     private static final int VIEW_TYPE_TOTAL_SCORE = 0;
     private static final int VIEW_TYPE_REVIEW_LIST = 1;
     private Context mContext;
-    private int mTotalScrore;
+    private float mTotalScrore;
     private ArrayList<ProductReview> mReviews = new ArrayList<ProductReview>();
     
-    public ProductReviewsListAdapter(Context context, int totalScore, ArrayList<ProductReview> reviews) {
+    public ProductReviewsListAdapter(Context context, float totalScore, ArrayList<ProductReview> reviews) {
         assert (context != null);
         assert (totalScore >= 0);
         mContext = context;
@@ -60,10 +61,19 @@ public class ProductReviewsListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-        if (position == 0) {
-            if (view == null) {
-                view = LayoutInflater.from(mContext).inflate(R.layout.product_satisfaction_view, parent, false);
-            }
+        switch (getItemViewType(position)) {
+            case VIEW_TYPE_TOTAL_SCORE:
+                if (view == null) {
+                    view = LayoutInflater.from(mContext).inflate(R.layout.product_satisfaction_view, parent, false);
+                }
+                BigStarScoreView scoreView = (BigStarScoreView) view.findViewById(R.id.big_score_view);
+                scoreView.setScore(mTotalScrore);
+                break;
+            case VIEW_TYPE_REVIEW_LIST:
+                if (view == null) {
+                    view = LayoutInflater.from(mContext).inflate(R.layout.product_review_list_item, parent, false);
+                }
+                break;
         }
         return view;
     }
