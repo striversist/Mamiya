@@ -1,0 +1,207 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/white" >
+    
+    <!-- Header begin << -->
+    <RelativeLayout
+        android:id="@+id/header_rl"
+        android:layout_width="match_parent"
+        android:layout_height="73dp" >
+        
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sample_product_small_picture_1"
+            android:contentDescription="@null" />
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/picture"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+            
+            <TextView
+                android:id="@+id/currency_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:text="@string/chinese_currency_symbol" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/currency_symbol"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:text="@string/sample_product_price_1" />
+            
+            <TextView
+                android:id="@+id/stock_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/price"
+                android:layout_marginLeft="10dp"
+                android:layout_alignBaseline="@id/price"
+                android:textSize="12sp"
+                android:textColor="@color/sub_title_light_gray"
+                android:text="@string/sample_product_stock_num_1" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currency_symbol"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/sub_title_dark_gray"
+                android:text="@string/pick_product_details" />
+            
+            <ImageView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_cancel"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_bg" />
+    </RelativeLayout>
+    <!-- Header end >> -->
+    
+    <!-- Choose size begin << -->
+    <RelativeLayout
+        android:id="@+id/size_rl"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/header_rl" >
+        
+        <TextView
+            android:id="@+id/size_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/sub_title_dark_gray"
+            android:text="@string/product_size" />
+        
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/size_tv" >
+	            
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sample_product_size_1" />
+                <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/sample_product_size_2" />
+                <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/sample_product_size_3" />
+                <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/sample_product_size_4" />
+            </RadioGroup>
+        </HorizontalScrollView>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dotted_line" />
+    </RelativeLayout>
+    <!-- Choose size end >> -->
+    
+    <!-- Choose color begin << -->
+    <RelativeLayout
+        android:id="@+id/color_rl"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/size_rl" >
+        
+        <TextView
+            android:id="@+id/color_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/sub_title_dark_gray"
+            android:text="@string/color" />
+        
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/color_tv" >
+                
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sample_product_color_1" />
+                <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/sample_product_color_2" />
+                <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/sample_product_color_3" />
+            </RadioGroup>
+        </HorizontalScrollView>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dotted_line" />
+    </RelativeLayout>
+    <!-- Choose color end >> -->
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_below="@id/color_rl" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/sub_title_dark_gray"
+            android:text="@string/buy_count" />
+    </RelativeLayout>
+    
+</RelativeLayout>

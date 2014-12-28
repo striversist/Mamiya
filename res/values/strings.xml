@@ -55,6 +55,10 @@
     <string name="addresses">地址管理</string>
     <string name="feedback">意见反馈</string>
     <string name="about_us">关于我们</string>
+    <string name="pick_product_details">请选择分类</string>
+    <string name="product_size">尺码</string>
+    <string name="color">颜色</string>
+    <string name="buy_count">购买数量</string>
     
     <string name="sample_seckill_header_time">10:00</string>
     <string name="sample_seckill_item_title_1">Similac雅培亲体金装喜康力幼儿奶粉</string>
@@ -89,6 +93,14 @@
     <string name="sample_product_params_for_ages_1">2岁  3岁  6岁-8岁  儿童</string>
     <string name="sample_product_params_product_place_1">日本</string>
     <string name="sample_product_details_text">2014最后一次疯狂！您准备好了吗？\n为了美丽的您，为了可爱的宝宝赶紧囤货起来！</string>
+    <string name="sample_product_stock_num_1">(库存369件)</string>
     <string name="sample_mine_nickname_1">灰姑娘 12123</string>
+    <string name="sample_product_size_1">110cm</string>
+    <string name="sample_product_size_2">120cm</string>
+    <string name="sample_product_size_3">130cm</string>
+    <string name="sample_product_size_4">140cm</string>
+    <string name="sample_product_color_1">粉红色</string>
+    <string name="sample_product_color_2">黑色</string>
+    <string name="sample_product_color_3">白色</string>
 
 </resources>
