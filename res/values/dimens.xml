@@ -4,5 +4,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="bottom_tab_height">41.0dp</dimen>
+    <dimen name="product_bottom_height">60dp</dimen>
 
 </resources>

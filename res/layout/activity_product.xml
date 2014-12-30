@@ -60,19 +60,19 @@
     <LinearLayout
         android:id="@+id/cart_ll"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/product_bottom_height"
         android:layout_marginTop="10dp"
         android:layout_alignParentBottom="true"
         android:background="@color/header_bg"
         android:orientation="vertical" >
-	    
+        
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/header_bg" />
         
         <TextView
-            android:id="@+id/add_cart"
+            android:id="@+id/add_to_cart"
             android:layout_width="117dp"
             android:layout_height="47dp"
             android:layout_marginTop="5dp"
@@ -82,8 +82,18 @@
             android:textSize="12sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:text="@string/add_to_cart" />
-        
+            android:text="@string/add_to_cart"
+            android:clickable="true"
+            android:onClick="onClick" />
     </LinearLayout>
+    
+    <include
+        layout="@layout/product_details_picker"
+        android:id="@+id/details_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/product_bottom_height"
+        android:visibility="gone" />
     
 </RelativeLayout>
